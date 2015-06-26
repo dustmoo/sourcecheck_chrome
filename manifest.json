@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "SourceCheck.it",
+  "description": "Trust your information. The internet is full of misinformation and propoganda. SourceCheck helps you to cut through all of the b.s. and find quality information.",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "SourceCheckChrome.png",
+    "default_popup": "sourcecheck.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
