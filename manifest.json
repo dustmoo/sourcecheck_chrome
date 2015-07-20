@@ -3,14 +3,36 @@
 
   "name": "SourceCheck.it",
   "description": "Trust your information. The internet is full of misinformation and propoganda. SourceCheck helps you to cut through all of the b.s. and find quality information.",
-  "version": "0.1",
+  "homepage_url": "http://sourcecheck.it",
+  "version": "0.0.2",
 
   "browser_action": {
     "default_icon": "SourceCheckChrome.png",
     "default_popup": "sourcecheck.html"
   },
+  "web_accessible_resources": [
+    "images/*.png"
+  ],
   "permissions": [
-    "activeTab",
-    "https://ajax.googleapis.com/"
+  "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "css/sourcecheck/main.css"
+      ]
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/libs/jquery-1.11.3.min.js",
+        "js/sourcecheck/main.js"
+      ]
+    }
   ]
 }
